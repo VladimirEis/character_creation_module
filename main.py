@@ -1,7 +1,5 @@
 from random import randint
 
-from graphic_arts.start_game_banner import run_screensaver
-
 
 def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
@@ -90,8 +88,7 @@ def choice_char_class() -> str:
     return char_class
 
 
-if __name__ == '__main__':
-    run_screensaver()
+def main() -> str:
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name: str = input('...назови себя: ')
@@ -101,3 +98,6 @@ if __name__ == '__main__':
     print('Воитель, Маг, Лекарь')
     char_class: str = choice_char_class()
     print(start_training(char_name, char_class))
+
+
+main()
